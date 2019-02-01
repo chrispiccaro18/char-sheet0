@@ -9,28 +9,35 @@
 </head>
 <body>
     <header>
-        <h1>5E Character Sheet Generator</h1>
+        <h1>5<sup>th</sup> Edition Character Sheet Generator</h1>
     </header>
     <main>
-        <section>
+        <section id="attributes-section">
+            Choose your class: 
+            <form id="class-form">
+                <input type="radio" name="class" value="fighter" id="fighter-radio"> Fighter
+                <input type="radio" name="class" value="wizard" id="wizard-radio"> Wizard
+                <input type="radio" name="class" value="rogue" id="rogue-radio"> Rogue
+                <input type="radio" name="class" value="cleric" id="cleric-radio"> Cleric
+            </form> 
+            Choose your race: 
+            <form id="race-form">
+                <input type="radio" name="race" value="human" id="human-radio"> Human
+                <input type="radio" name="race" value="dwarf" id="dwarf-radio"> Dwarf
+                <input type="radio" name="race" value="elf" id="elf-radio"> Elf
+                <input type="radio" name="race" value="halfling" id="halfling-radio"> Halfling
+            </form> 
+        </section>
+        <section id="roll-section">
             <p>
-                Choose your class: 
-                <form id="class-form">
-                    <input type="radio" name="class" value="fighter" id="fighter-radio"> Fighter
-                    <input type="radio" name="class" value="wizard" id="wizard-radio"> Wizard
-                    <input type="radio" name="class" value="rogue" id="rogue-radio"> Rogue
-                    <input type="radio" name="class" value="cleric" id="cleric-radio"> Cleric
-                </form> 
+                Roll for your stats:
             </p>
-            <p>
-                Choose your race: 
-                <form id="race-form">
-                    <input type="radio" name="race" value="human" id="human-radio"> Human
-                    <input type="radio" name="race" value="dwarf" id="dwarf-radio"> Dwarf
-                    <input type="radio" name="race" value="elf" id="elf-radio"> Elf
-                    <input type="radio" name="race" value="halfling" id="halfling-radio"> Halfling
-                </form> 
-            </p>
+            <button id="d20-button"><img id="d20-img" src="./assets/d20.png" alt="pic of die"></button>
+        </section>
+        <section id="stats-section">
+            <form>
+
+            </form>
         </section>
     </main>
     <footer>
