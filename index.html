@@ -5,17 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <title>Document</title>
+    <title>Character Sheet Generator</title>
 </head>
 <body>
     <header>
-
+        <h1>5E Character Sheet Generator</h1>
     </header>
     <main>
-
+        <section>
+            <p>
+                Choose your class: 
+                <form id="class-form">
+                    <input type="radio" name="class" value="fighter" id="fighter-radio"> Fighter
+                    <input type="radio" name="class" value="wizard" id="wizard-radio"> Wizard
+                    <input type="radio" name="class" value="rogue" id="rogue-radio"> Rogue
+                    <input type="radio" name="class" value="cleric" id="cleric-radio"> Cleric
+                </form> 
+            </p>
+            <p>
+                Choose your race: 
+                <form id="race-form">
+                    <input type="radio" name="race" value="human" id="human-radio"> Human
+                    <input type="radio" name="race" value="dwarf" id="dwarf-radio"> Dwarf
+                    <input type="radio" name="race" value="elf" id="elf-radio"> Elf
+                    <input type="radio" name="race" value="halfling" id="halfling-radio"> Halfling
+                </form> 
+            </p>
+        </section>
     </main>
     <footer>
-
+        <img src="./assets/amp.png" alt="D&D ampersand">
     </footer>
     <script type="module" src="./src/index.js"></script>
 </body>
