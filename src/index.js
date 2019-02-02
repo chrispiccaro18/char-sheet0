@@ -68,19 +68,27 @@ d20Button.addEventListener('click', function() {
 });
 
 classForm.addEventListener('change', function() {
+    for(let i = 0; i < statCells.length; i++) {
+        statCells[i].classList.remove('main-attribute-for-class');
+        
+    }
     const classPicked = classOptions.value;
     switch(classPicked) {
         case 'fighter':
             classImageSrc = classImageArray[0];
+            statCells[0].classList.add('main-attribute-for-class');
             break;
         case 'wizard':
             classImageSrc = classImageArray[1];
+            statCells[3].classList.add('main-attribute-for-class');
             break;
         case 'rogue':
             classImageSrc = classImageArray[2];
+            statCells[1].classList.add('main-attribute-for-class');
             break;
         case 'cleric':
             classImageSrc = classImageArray[3];
+            statCells[4].classList.add('main-attribute-for-class');
             break;
         default:
             classImageSrc = '';

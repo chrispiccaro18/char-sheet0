@@ -66,6 +66,10 @@ div {
     visibility: hidden;
 }
 
+td.main-attribute-for-class {
+    background: rgb(42, 204, 53);
+}
+
 #stat-headings {
     text-align: center;
     background: white;
