@@ -21,34 +21,11 @@ const classImageArray = ['../assets/fighter.png', '../assets/wizard.png', '../as
 let classImageSrc = '';
 
 d20Button.addEventListener('click', function() {
-    const classPicked = classOptions.value;
     const racePicked = raceOptions.value;
 
-    if(classPicked === '' || racePicked === '') {
-        alert('Please pick a class and a race to get your stats.');
+    if(racePicked === '') {
+        alert('Please pick a race to roll for your stats.');
     } else {
-        switch(classPicked) {
-            case 'fighter':
-                classImageSrc = classImageArray[0];
-                break;
-            case 'wizard':
-                classImageSrc = classImageArray[1];
-                break;
-            case 'rogue':
-                classImageSrc = classImageArray[2];
-                break;
-            case 'cleric':
-                classImageSrc = classImageArray[3];
-                break;
-            default:
-                classImageSrc = '';
-                break;
-        }
-        classImage.src = classImageSrc;
-        if(classImage.src !== '') {
-            classImage.classList.remove('hidden');
-        }
-        
         for(let i = 0; i < statCells.length; i++) {
             const rawAbilityscore = rollD6DropLowest(diceForAbilityScoreRoll);
             statCells[i].value = rawAbilityscore; 
@@ -87,5 +64,30 @@ d20Button.addEventListener('click', function() {
             statCells[i].textContent = statCells[i].value;
             modCells[i].textContent = abilityModify(statCells[i].value); 
         }
+    }
+});
+
+classForm.addEventListener('change', function() {
+    const classPicked = classOptions.value;
+    switch(classPicked) {
+        case 'fighter':
+            classImageSrc = classImageArray[0];
+            break;
+        case 'wizard':
+            classImageSrc = classImageArray[1];
+            break;
+        case 'rogue':
+            classImageSrc = classImageArray[2];
+            break;
+        case 'cleric':
+            classImageSrc = classImageArray[3];
+            break;
+        default:
+            classImageSrc = '';
+            break;
+    }
+    classImage.src = classImageSrc;
+    if(classImage.src !== '') {
+        classImage.classList.remove('hidden');
     }
 });

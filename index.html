@@ -12,15 +12,6 @@
         <h1>5<sup>th</sup> Edition Character Generator</h1>
     </header>
     <main>
-        <section id="class-section">
-            <p>Choose your class:</p> 
-            <form id="class-form">
-                <input type="radio" name="class" value="fighter" id="fighter-radio"> Fighter
-                <input type="radio" name="class" value="wizard" id="wizard-radio"> Wizard
-                <input type="radio" name="class" value="rogue" id="rogue-radio"> Rogue
-                <input type="radio" name="class" value="cleric" id="cleric-radio"> Cleric
-            </form> 
-        </section>
         <section>
             <p>Choose your race:</p> 
             <form id="race-form">
@@ -33,9 +24,6 @@
         <section id="roll-section">
             <p>Click to roll for your stats:</p>
             <button id="d20-button"><img id="d20-img" src="./assets/d20.png" alt="pic of die"></button>
-            <div id="class-image-div">
-                <img id="class-image" class="hidden" src="" alt="class image">
-            </div>
         </section>
         <section id="stats-section">
             <table>
@@ -64,6 +52,18 @@
                     <td id="cha-mod" class="mod-cell"></td>
                 </tr>
             </table>
+        </section>
+        <section id="class-section">
+            <p>Choose your class:</p> 
+            <form id="class-form">
+                <input type="radio" name="class" value="fighter" id="fighter-radio"> Fighter
+                <input type="radio" name="class" value="wizard" id="wizard-radio"> Wizard
+                <input type="radio" name="class" value="rogue" id="rogue-radio"> Rogue
+                <input type="radio" name="class" value="cleric" id="cleric-radio"> Cleric
+            </form>
+            <div id="class-image-div">
+                <img id="class-image" class="hidden" src="" alt="class image">
+            </div> 
         </section>
     </main>
     <footer>
