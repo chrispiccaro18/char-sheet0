@@ -14,9 +14,8 @@ header {
 }
 
 footer {
-    position: fixed;
-    bottom: 0px;
-    left: 50%;
+    text-align: center;
+    bottom: 10px;
 }
 
 section {
@@ -24,9 +23,12 @@ section {
 }
 
 table {
-    position: fixed;
     border: 3px solid black;
     background: white;
+}
+
+div {
+    margin-top: 10px;
 }
 
 .stat-heading {
@@ -44,6 +46,10 @@ table {
     width: 60px;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 #stat-headings {
     text-align: center;
     background: white;
@@ -59,4 +65,12 @@ table {
 #d20-img {
     width: 100px;
     background: white;
+}
+
+#class-image-div {
+    height: 50px;
+}
+
+#class-image {
+    height: 40px;
 }

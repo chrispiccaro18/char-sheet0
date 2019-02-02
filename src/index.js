@@ -1,4 +1,11 @@
-import rollD6DropLowest from '../src/roll-d6-drop-lowest.js'
+import rollD6DropLowest from '../src/roll-d6-drop-lowest.js';
+
+function clearImg() {
+    console.log('in function');
+    const currentClassImages = document.querySelectorAll('.chosen-class-img');
+    const currentClassImage = currentClassImages[0];
+    currentClassImage.remove();
+}
 
 // global variable for amount of dice for ability score roll
 const diceForAbilityScoreRoll = 3;
@@ -9,11 +16,37 @@ const statCells = document.querySelectorAll('.stat-cell');
 const classForm = document.getElementById('class-form');
 const classOptions = classForm.elements.class;
 
+const classImage = document.getElementById('class-image');
+const classImageArray = ['../assets/fighter.png', '../assets/wizard.png', '../assets/rogue.png', '../assets/cleric.png'];
+
 const raceForm = document.getElementById('race-form');
 const raceOptions = raceForm.elements.race;
 
+let classImageSrc = '';
+
 d20Button.addEventListener('click', function() {
     const classPicked = classOptions.value;
+    
+    switch(classPicked) {
+        case 'fighter':
+            classImageSrc = classImageArray[0];
+            break;
+        case 'wizard':
+            classImageSrc = classImageArray[1];
+            break;
+        case 'rogue':
+            classImageSrc = classImageArray[2];
+            break;
+        case 'cleric':
+            classImageSrc = classImageArray[3];
+            break;
+        default:
+            classImageSrc = '';
+            break;
+    }
+    classImage.src = classImageSrc;
+    classImage.classList.remove('hidden');
+
     const racePicked = raceOptions.value;
     
     for(let i = 0; i < statCells.length; i++) {
