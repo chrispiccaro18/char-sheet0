@@ -27,6 +27,7 @@ section {
 
 p {
     padding: 5px;
+    vertical-align: 0;
 }
 
 table {
@@ -80,6 +81,7 @@ td.main-attribute-for-class {
     border: 2px solid black;
     border-radius: 10%;
     background: white;
+    display: inline-block;
 }
 
 #d20-img {
