@@ -78,9 +78,9 @@ d20Button.addEventListener('click', function() {
                 break;
         }
         
-        for(let i = 0; i < statCells.length; i++) {
-            statCells[i].textContent = statCells[i].value;
-            // pass value into function that gives mod 
-        }
+        // for(let i = 0; i < statCells.length; i++) {
+        //     statCells[i].textContent = statCells[i].value;
+        //     // pass value into function that gives mod 
+        // }
     }
 });
