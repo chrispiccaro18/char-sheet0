@@ -45,7 +45,9 @@ d20Button.addEventListener('click', function() {
                 break;
         }
         classImage.src = classImageSrc;
-        classImage.classList.remove('hidden');
+        if(classImage.src !== '') {
+            classImage.classList.remove('hidden');
+        }
         
         for(let i = 0; i < statCells.length; i++) {
             const rawAbilityscore = rollD6DropLowest(diceForAbilityScoreRoll);
