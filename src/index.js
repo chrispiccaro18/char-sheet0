@@ -1,19 +1,22 @@
 import rollD6DropLowest from '../src/roll-d6-drop-lowest.js';
+import abilityModify from '../src/ability-modify.js';
 
-// global variable for amount of dice for ability score roll
-const diceForAbilityScoreRoll = 3;
+// global variable for amount of six-sided-dice for ability score roll
+const diceForAbilityScoreRoll = 4;
 
 const d20Button = document.getElementById('d20-button');
+
 const statCells = document.querySelectorAll('.stat-cell');
+const modCells = document.querySelectorAll('.mod-cell');
 
 const classForm = document.getElementById('class-form');
 const classOptions = classForm.elements.class;
 
-const classImage = document.getElementById('class-image');
-const classImageArray = ['../assets/fighter.png', '../assets/wizard.png', '../assets/rogue.png', '../assets/cleric.png'];
-
 const raceForm = document.getElementById('race-form');
 const raceOptions = raceForm.elements.race;
+
+const classImage = document.getElementById('class-image');
+const classImageArray = ['../assets/fighter.png', '../assets/wizard.png', '../assets/rogue.png', '../assets/cleric.png'];
 
 let classImageSrc = '';
 
@@ -78,9 +81,9 @@ d20Button.addEventListener('click', function() {
                 break;
         }
         
-        // for(let i = 0; i < statCells.length; i++) {
-        //     statCells[i].textContent = statCells[i].value;
-        //     // pass value into function that gives mod 
-        // }
+        for(let i = 0; i < statCells.length; i++) {
+            statCells[i].textContent = statCells[i].value;
+            modCells[i].textContent = abilityModify(statCells[i].value); 
+        }
     }
 });

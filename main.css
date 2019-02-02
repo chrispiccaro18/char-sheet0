@@ -46,6 +46,15 @@ div {
     width: 60px;
 }
 
+.mod-cell {
+    text-align: center;
+    font-size: 3em;
+    border: 2px solid black;
+    background: white;
+    height: 70px;
+    width: 60px;
+}
+
 .hidden {
     visibility: hidden;
 }
