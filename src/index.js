@@ -17,8 +17,15 @@ const raceOptions = raceForm.elements.race;
 
 const classImage = document.getElementById('class-image');
 const classImageArray = ['../assets/fighter.png', '../assets/wizard.png', '../assets/rogue.png', '../assets/cleric.png'];
-
 let classImageSrc = '';
+
+const raceArray = ['human', 'dwarf', 'elf', 'halfling'];
+for(let i = 0; i < raceArray.length; i++) {
+    const race = raceArray[i];
+    const raceRadio = document.createElement('input');
+    raceRadio.type = 'radio';
+    
+}
 
 d20Button.addEventListener('click', function() {
     const racePicked = raceOptions.value;

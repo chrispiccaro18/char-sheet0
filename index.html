@@ -19,13 +19,12 @@
                 <input type="radio" name="race" value="dwarf" id="dwarf-radio"> Dwarf
                 <input type="radio" name="race" value="elf" id="elf-radio"> Elf
                 <input type="radio" name="race" value="halfling" id="halfling-radio"> Halfling
-            </form> 
+            </form>
+            <p id="race-attribute-explanation"></p> 
         </section>
         <section id="roll-section">
-            <p>
-                Click to roll for your stats:
-                <button id="d20-button"><img id="d20-img" src="./assets/d20.png" alt="pic of die"></button>
-            </p>
+            <p>Click to roll for your stats:</p>
+            <button id="d20-button"><img id="d20-img" src="./assets/d20.png" alt="pic of die"></button>
         </section>
         <section id="stats-section">
             <table>
@@ -54,6 +53,7 @@
                     <td id="cha-mod" class="mod-cell"></td>
                 </tr>
             </table>
+            <p id="highlight-explanation">After you choose a class, the main attribute will be higlighed in green.</p>
         </section>
         <section id="class-section">
             <p>Choose your class:</p> 

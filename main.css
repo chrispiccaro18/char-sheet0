@@ -22,12 +22,12 @@ footer {
 }
 
 section {
-    margin: 25px;
+    margin: 10px;
+    padding: 5px;
 }
 
 p {
     padding: 5px;
-    vertical-align: 0;
 }
 
 table {
@@ -81,7 +81,6 @@ td.main-attribute-for-class {
     border: 2px solid black;
     border-radius: 10%;
     background: white;
-    display: inline-block;
 }
 
 #d20-img {
@@ -95,4 +94,9 @@ td.main-attribute-for-class {
 
 #class-image {
     height: 40px;
+}
+
+#highlight-explanation {
+    font-style: italic;
+    font-size: 80%;
 }
