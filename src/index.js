@@ -13,7 +13,7 @@ const classForm = document.getElementById('class-form');
 const classOptions = classForm.elements.class;
 
 const raceForm = document.getElementById('race-form');
-const raceOptions = raceForm.elements.race;
+const raceAttributeExplanation = document.getElementById('race-attribute-explanation');
 
 const classImage = document.getElementById('class-image');
 const classImageArray = ['../assets/fighter.png', '../assets/wizard.png', '../assets/rogue.png', '../assets/cleric.png'];
@@ -24,8 +24,43 @@ for(let i = 0; i < raceArray.length; i++) {
     const race = raceArray[i];
     const raceRadio = document.createElement('input');
     raceRadio.type = 'radio';
+    raceRadio.name = 'race';
+    raceRadio.value = race;
+    raceForm.appendChild(raceRadio);
+
+    const raceSpan = document.createElement('span');
+    raceSpan.textContent = ' ' + race + ' ';
+    raceForm.appendChild(raceSpan);
+
+    raceRadio.addEventListener('change', function() {
+        const raceOptions = raceForm.elements.race;
+        const racePicked = raceOptions.value;
+        switch(racePicked) {
+            case 'human':
+                // increase all by 1
+                raceAttributeExplanation.innerText = 'Humans add one to all attributes';
+                break;
+            case 'dwarf':
+                // increase str and con by 2
+                raceAttributeExplanation.innerText = 'Dwarves add 2 to STR and CON';
+                break;
+            case 'elf':
+                // increase dex by 2 and wis by 1
+                raceAttributeExplanation.innerText = 'Elves add 2 to DEX and 1 to WIS';
+                break;
+            case 'halfling':
+                // increase dex by 2 and cha by 1
+                raceAttributeExplanation.innerText = 'Halflings add 2 to DEX and 1 to CHA';
+                break;
+            default:
+                break;
+
+        }
+    });
     
 }
+
+const raceOptions = raceForm.elements.race;
 
 d20Button.addEventListener('click', function() {
     const racePicked = raceOptions.value;

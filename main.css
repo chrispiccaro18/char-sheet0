@@ -63,12 +63,27 @@ div {
     width: 60px;
 }
 
+.explanation {
+    font-style: italic;
+    font-size: 80%;
+    margin: 0;
+}
+
 .hidden {
     visibility: hidden;
 }
 
 td.main-attribute-for-class {
     background: rgb(42, 204, 53);
+}
+
+#race-form {
+    text-transform: capitalize;
+}
+
+#race-attribute-explanation {
+    margin: 0;
+    height: 20px;
 }
 
 #stat-headings {
@@ -94,9 +109,4 @@ td.main-attribute-for-class {
 
 #class-image {
     height: 40px;
-}
-
-#highlight-explanation {
-    font-style: italic;
-    font-size: 80%;
 }

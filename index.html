@@ -15,16 +15,13 @@
         <section>
             <p>Choose your race:</p> 
             <form id="race-form">
-                <input type="radio" name="race" value="human" id="human-radio"> Human
-                <input type="radio" name="race" value="dwarf" id="dwarf-radio"> Dwarf
-                <input type="radio" name="race" value="elf" id="elf-radio"> Elf
-                <input type="radio" name="race" value="halfling" id="halfling-radio"> Halfling
             </form>
-            <p id="race-attribute-explanation"></p> 
+            <p id="race-attribute-explanation" class="explanation"></p> 
         </section>
         <section id="roll-section">
             <p>Click to roll for your stats:</p>
             <button id="d20-button"><img id="d20-img" src="./assets/d20.png" alt="pic of die"></button>
+            <p id="roll-explanation" class="explanation">We are using the rolling method of 4d6 and droping the lowest.</p>
         </section>
         <section id="stats-section">
             <table>
@@ -53,7 +50,7 @@
                     <td id="cha-mod" class="mod-cell"></td>
                 </tr>
             </table>
-            <p id="highlight-explanation">After you choose a class, the main attribute will be higlighed in green.</p>
+            <p id="highlight-explanation" class="explanation">After you choose a class, the main attribute for that class will be higlighed in green.</p>
         </section>
         <section id="class-section">
             <p>Choose your class:</p> 
